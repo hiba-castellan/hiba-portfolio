@@ -6,7 +6,7 @@ import { motion, useInView, PanInfo } from 'framer-motion'
 const GITHUB = 'https://github.com/hiba-castellan'
 const CARD_W = 340
 const CARD_H = 460
-const N = 5
+const N = 6
 
 const PROJECTS = [
   {
@@ -30,7 +30,7 @@ const PROJECTS = [
     description: 'AirChalk is a gesture-driven drawing system enabling users to create digital content in mid-air — no physical input device needed. Real-time hand tracking interprets natural gestures as drawing commands, while an AI layer recognizes completed sketches and converts them into dynamic, animated objects. Draw a fish, watch it swim. Bridges human expression, computer vision, and intelligent systems for applications in education, creative design, and next-gen UIs.',
     tags: ['Computer Vision', 'AI', 'Gesture', 'Animation'],
     tech: ['Python', 'MediaPipe', 'OpenCV', 'Deep Learning', 'Real-time Rendering'],
-    github: GITHUB, // Replace with direct repo URL e.g. GITHUB + '/airchalk'
+    github: 'https://github.com/hiba-castellan/airchalk', // Replace with direct repo URL e.g. GITHUB + '/airchalk'
     demo: '#', // Add demo URL or video link when available
     date: 'Feb 2026 – Present',
     screenshots: [],
@@ -62,17 +62,30 @@ const PROJECTS = [
     screenshots: [],
   },
   {
-    id: 4, num: '05', featured: true, accent: '#f5c97a',
-    title: 'StyleSense AI',
-    subtitle: 'Personal Fashion Intelligence System',
-    summary: 'An AI stylist that analyzes your body, skin tone, and wardrobe to deliver outfit recommendations, color palettes, and virtual try-ons.',
-    description: 'StyleSense AI replaces a $300/hour personal stylist with an always-on, image-aware AI. A multi-modal computer vision pipeline classifies body shape via MediaPipe, extracts skin undertones using the Monk Skin Tone Scale, and stores wardrobe items as CLIP embeddings in a vector DB. An LLM reasons over occasion context and weather data to recommend complete outfits — with a Stable Diffusion virtual try-on as the showstopper feature. Currently in active development.',
-    tags: ['AI', 'Fashion', 'Computer Vision', 'LLM', 'In Progress'],
-    tech: ['FastAPI', 'CLIP', 'MediaPipe', 'Stable Diffusion', 'Pinecone', 'React Native', 'Claude API'],
-    github: GITHUB, // Will update with repo URL when public
-    demo: '#', // In progress — no demo yet
-    date: 'In Progress',
-    screenshots: [],
+    id: 4, num: '05', featured: true, accent: '#f0a58a',
+    title: 'Climate AQI Intelligence',
+    subtitle: 'Global Air Quality Prediction & Analysis',
+    summary: 'End-to-end ML pipeline that analyzes air quality across 15 global cities and predicts both AQI category and AQI value.',
+    description: 'A complete data science pipeline covering 15 major cities from 2015 to 2023. It engineers domain-specific features such as a weighted pollutant load, PM ratio, wind dispersion and cyclical seasonality, then trains a Random Forest classifier for 6-class AQI category prediction and a Gradient Boosting regressor for AQI value (R² > 0.97). EDA surfaces regional, seasonal and pollutant-driven patterns, from winter temperature-inversion spikes to wind as the strongest natural mitigator.',
+    tags: ['ML', 'Data Science', 'Climate', 'Analytics'],
+    tech: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'Seaborn'],
+    github: 'https://github.com/hiba-castellan/climate-aqi-project',
+    demo: '#', // Add a Streamlit/Gradio dashboard URL if you build one
+    date: '',
+    screenshots: [], // e.g. ['/projects/aqi.png', '/projects/aqi-2.png']
+  },
+  {
+    id: 5, num: '06', featured: true, accent: '#f5c97a',
+    title: 'MS-DCAFNet',
+    subtitle: 'Building Damage Assessment from Satellite Imagery',
+    summary: 'Siamese deep learning model that maps pre- and post-disaster satellite images to pixel-level, five-class building damage, with a full explainability pipeline.',
+    description: 'Research project from my internship at FACTS-H Lab, IIIT Kottayam. MS-DCAFNet replaces conventional downsampling with a learnable Haar wavelet encoder to preserve building edges, and fuses pre/post-disaster features at all four scales with a Hierarchical Damage-Conditioned Attention Fusion (H-DCAF) module. Trained on xBD with event-based splits to avoid spatial leakage: 94.0% overall accuracy, 0.446 mIoU, 0.612 Kappa. Ablations show H-DCAF beating subtraction and concatenation fusion, and an XAI suite (Grad-CAM, Integrated Gradients, LRP, LIME) checks that predictions follow real structural damage.',
+    tags: ['Research', 'Computer Vision', 'Remote Sensing', 'XAI'],
+    tech: ['Python', 'PyTorch', 'Siamese Network', 'Wavelets', 'Captum', 'Zennit', 'LIME'],
+    github: 'https://github.com/hiba-castellan/ms-dcafnet', // Repo is private for now, so visitors will get a 404 until you make it public
+    demo: '#',
+    date: 'May 2026 – Jul 2026',
+    screenshots: ['/projects/msdcafnet.png', '/projects/msdcafnet-xai.png', '/projects/msdcafnet-gradcam.png'],
   },
 ]
 
