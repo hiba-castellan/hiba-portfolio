@@ -8,7 +8,7 @@ interface NavProps {
   toggleTheme: () => void
 }
 
-const links = ['About', 'Skills', 'Projects', 'Contact']
+const links = ['About', 'Skills', 'Projects', 'Research', 'Contact']
 
 export default function Navigation({ theme, toggleTheme }: NavProps) {
   const [scrolled, setScrolled] = useState(false)

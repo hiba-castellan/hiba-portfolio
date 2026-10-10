@@ -7,6 +7,7 @@ import Stats from '@/components/Stats'
 import About from '@/components/About'
 import Skills from '@/components/Skills'
 import Projects from '@/components/Projects'
+import Research from '@/components/Research'
 import Resume from '@/components/Resume'
 import Contact from '@/components/Contact'
 import PetalCanvas from '@/components/PetalCanvas'
@@ -34,6 +35,7 @@ export default function Home() {
         <About />
         <Skills />
         <Projects />
+        <Research />
         <Resume />
         <Contact />
       </main>
@@ -48,7 +50,7 @@ export default function Home() {
       }}>
         ✦ Designed &amp; Built by{' '}
         <span style={{ color: 'var(--rose)' }}>Hiba V S</span>
-        {' '}· 2025 · All Rights Reserved
+        {' '}· 2026 · All Rights Reserved
       </footer>
     </div>
   )
